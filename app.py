@@ -48,7 +48,7 @@ def preprocess(tweet):
          u"\U000024C2-\U0001F251"
          "]+", flags=re.UNICODE)
     
-    print(stop_words)
+   
     word_tokens = tweet.split()
     #after tweepy preprocessing the colon symbol left remain after      #removing mentions
     tweet = re.sub(r':', '', tweet)
