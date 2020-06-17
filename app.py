@@ -6,7 +6,7 @@ import spacy
 import string
 nlp=spacy.load('en_core_web_sm')
 import nltk
-from nltk.corpus import stopwords
+
 
 
 
@@ -57,9 +57,7 @@ def preprocess(tweet):
     tweet = re.sub(r'[^\x00-\x7F]+',' ', tweet)
     #remove emojis from tweet
     tweet = emoji_pattern.sub(r'', tweet)
-    #filter using NLTK library append it to a string
-    filtered_tweet = [w for w in word_tokens if not w in stop_words]
-    filtered_tweet=[]
+    
 
     doc=nlp(tweet)
     filtered_words=[]
